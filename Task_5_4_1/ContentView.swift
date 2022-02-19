@@ -9,8 +9,33 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
+        NavigationView {
+            ScrollView {
+                
+                Image("McLaren570S")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+
+                Image("bmwM3gtr")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                
+                Image("McLaren570S")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+
+                Image("bmwM3gtr")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    
+            }
             .padding()
+            .navigationBarItems(leading: Image(systemName: "line.3.horizontal"), trailing: HStack{
+                Image(systemName: "camera.fill")
+                Image(systemName: "photo.fill")
+            })
+            .navigationBarTitle("Photos",displayMode: .inline)
+        }
     }
 }
 
